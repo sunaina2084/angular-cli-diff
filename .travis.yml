@@ -1,0 +1,11 @@
+sudo: false
+language: node_js
+git:
+  depth: false
+node_js:
+- 10.12
+script:
+- git config --global user.email cedric@ninja-squad.com
+- git config --global user.name cexbrayat
+- git remote set-url origin https://${GH_TOKEN}@github.com/cexbrayat/angular-cli-diff.git
+- "./newVersion.sh"
